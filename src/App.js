@@ -1,12 +1,14 @@
 import React, { Component } from "react";
-import "./App.css";
 import Navbar from "./components/layout/Navbar.js";
+import UserItem from "./components/users/UserItem.js";
+import "./App.css";
 
 class App extends Component {
   render() {
     return (
-      <div className="navbar bg-primary">
+      <div className="App">
         <Navbar />
+        <UserItem />
       </div>
     );
   }
