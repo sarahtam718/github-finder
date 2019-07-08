@@ -1,14 +1,22 @@
-import React, { Component } from "react";
-import Navbar from "./components/layout/Navbar.js";
-import UserItem from "./components/users/UserItem.js";
-import "./App.css";
+import React, { Component } from 'react';
+import Navbar from './components/layout/Navbar.js';
+import Users from './components/users/Users.js';
+import axios from 'axios';
+import './App.css';
 
 class App extends Component {
+  componentDidMount() {
+    axios
+      .get('https://api.github.com/users')
+      .then(res => console.log(res.data));
+  }
   render() {
     return (
-      <div className="App">
+      <div className='App'>
         <Navbar />
-        <UserItem />
+        <div className='container'>
+          <Users />
+        </div>
       </div>
     );
   }
