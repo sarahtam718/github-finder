@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Navbar = ({ icon, title }) => {
   return (
-    <div className="navbar bg-primary">
+    <div className='navbar bg-primary'>
       <h1>
         <i className={icon} />
         {title}
@@ -13,8 +13,8 @@ const Navbar = ({ icon, title }) => {
 };
 
 Navbar.defaultProps = {
-  title: "Github Finder",
-  icon: "fab fa-github"
+  title: 'Github Finder',
+  icon: 'fab fa-github'
 };
 
 Navbar.propTypes = {
